@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	<div class="app">
+		<div class="data">
+			<p>智能超级柜台</p>
+
+		</div>
+		<mark-box></mark-box>
+		
+	</div>
+  <script src="js/vue.js"></script>
+  <script src="js/axios.min.js"></script>
+  <script src="view/mark/index.js"></script>
+ <script>
+
+     let myPlugin = {
+           install:function(Vue){
+             Vue.prototype.$http = axios;
+           }
+        }
+     Vue.use(myPlugin)
+ 	new Vue({
+ 		 el:'.app',
+ 		/* data:{
+           datalis:[],
+ 		 }*/
+ 		
+ 	})
+ </script>
+
+</body>
+</html>
